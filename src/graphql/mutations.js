@@ -1,12 +1,9 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createPost = /* GraphQL */ `
-  mutation CreatePost(
-    $input: CreatePostInput!
-    $condition: ModelPostConditionInput
-  ) {
-    createPost(input: $input, condition: $condition) {
+export const createPostAndTimeline = /* GraphQL */ `
+  mutation CreatePostAndTimeline($content: String!) {
+    createPostAndTimeline(content: $content) {
       type
       id
       content
@@ -114,6 +111,20 @@ export const deleteTimeline = /* GraphQL */ `
         owner
         timestamp
       }
+    }
+  }
+`;
+export const createPost = /* GraphQL */ `
+  mutation CreatePost(
+    $input: CreatePostInput!
+    $condition: ModelPostConditionInput
+  ) {
+    createPost(input: $input, condition: $condition) {
+      type
+      id
+      content
+      owner
+      timestamp
     }
   }
 `;
